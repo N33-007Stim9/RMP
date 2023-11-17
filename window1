@@ -1,0 +1,166 @@
+окно2
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            Column {
+                Greeting(name = "  MIDI SHOULDER", family = "  ANCHOR BAG")
+
+            }
+
+        }
+    }
+}
+
+
+@Composable
+
+fun Greeting(name: String, family: String)
+{
+    Row()
+        {
+            Image(
+                painter = painterResource(id = R.drawable.photo1),
+                contentDescription = "Image",
+                contentScale = ContentScale.Crop, modifier = Modifier
+                    .height(510.dp)
+                    .width(400.dp)
+            )
+        }
+
+        Box (modifier = Modifier
+            .fillMaxSize()
+            )
+        {
+            Column()
+            {
+                Row(  modifier = Modifier
+                    .fillMaxWidth()
+                    ,
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically)
+
+                {
+                    Text(name , modifier = Modifier,
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight(570))
+
+                    Image(
+                        painter = painterResource(id = R.drawable.ph1),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(30.dp)
+                            .width(30.dp))
+                }
+
+                Row( modifier = Modifier
+                    .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically)
+
+                {
+                    Text(family,modifier = Modifier,
+                        fontSize = 22.sp,fontWeight = FontWeight(570))
+                }
+
+                Row (modifier = Modifier
+                    .fillMaxWidth().padding(10.dp)
+                    , horizontalArrangement = Arrangement.Start)
+                {
+                    Text(text = "470 $  " ,fontSize = 22.sp, color = Color.Red)
+                    Text(text = " 520 $" , fontSize = 22.sp ,color = Color.Gray,
+                        textDecoration = TextDecoration.LineThrough)
+                }
+
+                Row(modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(5.dp),
+                    horizontalArrangement = Arrangement.Center)
+                {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.photo3),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(4.dp)
+                            .width(410.dp))
+
+                }
+
+                Row( modifier = Modifier
+                    .fillMaxWidth().height(40.dp)
+                    ,
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically)
+                {
+                    Text(text = "COLOUR", modifier = Modifier, fontSize = 22.sp)
+                  Box(modifier = Modifier
+                      .size(25.dp)
+                      .background(
+                          color = Color.Yellow,
+                          shape = CircleShape))
+
+                    Image(
+                        painter = painterResource(id = R.drawable.photo5),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(20.dp)
+                            .width(20.dp))
+
+                    Image(
+                        painter = painterResource(id = R.drawable.photo6),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(20.dp)
+                            .width(4.dp))
+
+                    Text(text = " SIZE    " , modifier = Modifier, fontSize = 22.sp)
+                    Image(
+                        painter = painterResource(id = R.drawable.photo5),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(20.dp)
+                            .width(20.dp))
+
+
+                }
+                Row(modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(), horizontalArrangement = Arrangement.Center)
+                {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.photo3),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(4.dp)
+                            .width(410.dp))
+                }
+
+                Box (modifier = Modifier
+                    .fillMaxSize())
+
+                {
+
+                 Row (modifier = Modifier
+                     .fillMaxWidth()
+                     .padding(12.dp)
+                     ,horizontalArrangement = Arrangement.Center)
+                 {
+
+                     Image(
+                         painter = painterResource(id = R.drawable.photo7),
+                         contentDescription = "Image",
+                         contentScale = ContentScale.Crop, modifier = Modifier
+                             .height(52.dp)
+                             .width(365.dp))
+                 /* Text(text = "ADD TO BAG" ,
+                      modifier = Modifier
+                          .fillMaxWidth(1f),
+                      fontSize = 27.sp, textAlign = TextAlign.Center) */
+                 }   
+                }
+                
+            }
+        }
+    }
