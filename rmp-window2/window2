@@ -1,0 +1,205 @@
+Привет AZIZ
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            Column {
+                Greeting(name = "HOMEPAGE", family = "HANDBAGS")
+
+            }
+
+        }
+    }
+}
+
+
+@Composable
+
+fun Greeting(name: String, family: String) {
+
+
+    Card(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+
+    )
+    {
+        Box(
+            modifier = Modifier.height(65.dp)
+        )
+        {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.lupa),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(30.dp)
+                )
+                Text(
+                    name,
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight(700),
+                    color = Color.Black
+                )
+
+                Image(
+                    painter = painterResource(id = R.drawable.bag),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(30.dp)
+                )
+            }
+        }
+
+        Box()
+        {
+            Row(modifier = Modifier
+                .height(370.dp)
+                .width(500.dp))
+            {
+                Image(
+                    painter = painterResource(id = R.drawable.phote3),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+
+                        .height(350.dp)
+                        .width(15.dp)
+                )
+
+                Image(
+                    painter = painterResource(id = R.drawable.phote4),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding(10.dp)
+                        .height(360.dp)
+                        .width(342.dp)
+                )
+
+                Image(
+                    painter = painterResource(id = R.drawable.photo1),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .height(450.dp)
+                        .width(15.dp)
+                )
+            }
+        }
+        Text(
+            family, modifier = Modifier
+                .fillMaxWidth(1f)
+                .padding(10.dp),
+            textAlign = TextAlign.Center,
+            fontSize = 30.sp,
+            fontWeight = FontWeight(700),
+            color = Color.Black
+        )
+        Column( )
+        {
+            Text(text = "Thin mesh modeling bikes with push-up effect" ,
+                modifier = Modifier.fillMaxWidth(),  fontSize = 17.sp,
+                textAlign = TextAlign.Center ,
+                fontStyle = FontStyle.Normal
+            )
+            Text(text = " in the buttocks area and comective" ,
+                modifier = Modifier.fillMaxWidth(),  fontSize = 17.sp,
+                textAlign = TextAlign.Center ,
+                fontStyle = FontStyle.Normal
+            )
+            Text(text = "EXPLORE MORE" ,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp),  fontSize = 19.sp, color = Color.Blue,
+                textAlign = TextAlign.Center,
+                textDecoration = TextDecoration.Underline)
+
+        }
+        Column()
+        {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .padding(30.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically)
+            {
+
+                Image(
+                    painter = painterResource(id = R.drawable.vector1),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+
+                        .height(10.dp)
+                        .width(40.dp))
+
+                Image(
+                    painter = painterResource(id = R.drawable.point),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .height(30.dp)
+                        .width(120.dp))
+
+                Image(
+                    painter = painterResource(id = R.drawable.vector2),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+
+                        .height(10.dp)
+                        .width(40.dp))
+
+            }
+
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .padding(30.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically)
+            {
+                Image(
+                    painter = painterResource(id = R.drawable.four),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(60.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.three),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(60.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.two),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(60.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.one),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(60.dp))
+
+                            Image(
+                            painter = painterResource(id = R.drawable.fie),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .size(60.dp)
+                )
+
+            }
+        }
+
+    }
+}
