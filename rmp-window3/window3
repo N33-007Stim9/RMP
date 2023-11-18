@@ -1,0 +1,68 @@
+Окно 3
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            Column {
+                Greeting(name = "  MIDI SHOULDER", family = "  ANCHOR BAG")
+
+            }
+
+        }
+    }
+}
+
+
+@Composable
+
+fun Greeting(name: String, family: String)
+{
+
+        Box( modifier = Modifier.fillMaxSize())
+        {
+            Column(modifier = Modifier.padding(5.dp))
+            {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.photo11),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .height(55.dp)
+                            .width(380.dp))
+
+                    Image(
+                        painter = painterResource(id = R.drawable.photo12),
+                        contentDescription = "Image",
+                        contentScale = ContentScale.Crop, modifier = Modifier
+                            .padding()
+                            .height(55.dp)
+                            .width(365.dp))
+
+                Image(
+                    painter = painterResource(id = R.drawable.photo13),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .height(290.dp)
+                        .width(365.dp))
+
+                Image(
+                    painter = painterResource(id = R.drawable.photo14),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .height(290.dp)
+                        .width(365.dp))
+
+                Image(
+                    painter = painterResource(id = R.drawable.photo15),
+                    contentDescription = "Image",
+                    contentScale = ContentScale.Crop, modifier = Modifier
+                        .padding()
+                        .height(60.dp)
+                        .width(365.dp))
+
+
+        }
+    }
+}
